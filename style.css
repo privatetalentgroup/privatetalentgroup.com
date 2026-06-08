@@ -933,3 +933,36 @@ cite {
     flex-direction: column;
   }
 }
+
+/* Real image assets for GitHub Pages.
+   Keep this folder path exactly:
+   assets/images/hero-vegas-sphere.png
+   assets/images/lounge-trio.png
+*/
+
+.hero-visual {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.66), rgba(5, 5, 5, 0.04) 42%, rgba(5, 5, 5, 0.22)),
+    url("assets/images/hero-vegas-sphere.png") center / cover no-repeat;
+}
+
+.hero-visual .window-grid,
+.hero-visual .vegas-skyline,
+.hero-visual .sphere,
+.hero-visual .hero-figure {
+  display: none;
+}
+
+.lounge-panel {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.18)),
+    url("assets/images/lounge-trio.png") center / cover no-repeat;
+}
+
+.lounge-panel .lamp,
+.lounge-panel .couch,
+.lounge-panel .person,
+.lounge-panel .table-glow,
+.lounge-panel .wine {
+  display: none;
+}
