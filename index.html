@@ -16,28 +16,37 @@
         .nav-link:hover { color: #d4af37; }
         
         .logo-svg {
-            height: 38px;
+            height: 42px;
             width: auto;
             transition: transform 0.2s ease;
         }
-        .logo-svg:hover { transform: scale(1.05); }
+        .logo-svg:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Navbar -->
+    <!-- Navbar with Correct Key Logo -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Logo -->
+                <!-- KEY LOGO -->
                 <a href="index.html" class="flex items-center">
-                    <svg width="38" height="52" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <svg width="42" height="58" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <!-- Key Head -->
                         <circle cx="100" cy="80" r="55" fill="#d4af37"/>
                         <circle cx="100" cy="80" r="42" fill="#0a0a0a"/>
+                        
+                        <!-- Skyline -->
                         <path d="M65 95 L72 75 L80 90 L87 68 L95 88 L102 72 L110 92 L117 78 L125 95" 
                               stroke="#d4af37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <!-- Key Shaft -->
                         <rect x="92" y="130" width="16" height="110" rx="2" fill="#d4af37"/>
+                        
+                        <!-- Key Teeth -->
                         <path d="M92 200 L108 200 L108 220 L92 220 Z" fill="#d4af37"/>
                         <path d="M92 230 L108 230 L108 250 L92 250 Z" fill="#d4af37"/>
                         <path d="M92 260 L100 260 L100 275 L92 275 Z" fill="#d4af37"/>
@@ -115,7 +124,7 @@
         </div>
     </div>
 
-    <!-- Services Overview -->
+    <!-- Services -->
     <div id="services" class="max-w-screen-2xl mx-auto px-8 pb-20 scroll-mt-20">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
@@ -129,7 +138,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Cards -->
                 <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
                     <div class="flex items-center gap-x-3 mb-6">
                         <div class="w-6 h-px bg-[#d4af37]"></div>
@@ -180,7 +188,7 @@
         </div>
     </div>
 
-    <!-- Quick Links to Other Pages -->
+    <!-- Quick Links -->
     <div class="max-w-screen-2xl mx-auto px-8 pb-20">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-10">
