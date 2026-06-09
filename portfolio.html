@@ -16,21 +16,22 @@
         .nav-link:hover { color: #d4af37; }
         
         .logo-svg {
-            height: 38px;
+            height: 42px;
             width: auto;
+            display: block;
         }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Mobile Responsive Navbar -->
+    <!-- Navbar with Correct Key Logo -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Logo -->
+                <!-- KEY LOGO -->
                 <a href="index.html" class="flex items-center">
-                    <svg width="38" height="52" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <svg width="42" height="58" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
                         <circle cx="100" cy="80" r="55" fill="#d4af37"/>
                         <circle cx="100" cy="80" r="42" fill="#0a0a0a"/>
                         <path d="M65 95 L72 75 L80 90 L87 68 L95 88 L102 72 L110 92 L117 78 L125 95" 
@@ -53,7 +54,6 @@
                     <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
-                <!-- Desktop Book a Call -->
                 <div class="hidden md:block">
                     <button onclick="showBookModal()"
                             class="px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
@@ -103,7 +103,6 @@
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Growth Strategy -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <i class="fa-solid fa-chart-line text-[#d4af37] text-2xl"></i>
@@ -116,7 +115,6 @@
                     </a>
                 </div>
 
-                <!-- Messaging -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <i class="fa-solid fa-comments text-[#d4af37] text-2xl"></i>
@@ -129,7 +127,6 @@
                     </a>
                 </div>
 
-                <!-- Onboarding -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <i class="fa-solid fa-user-check text-[#d4af37] text-2xl"></i>
@@ -146,7 +143,7 @@
         </div>
     </div>
 
-    <!-- Why Our Portfolio Matters -->
+    <!-- Why Our Approach Works -->
     <div class="max-w-screen-2xl mx-auto px-6 pb-20 border-t border-zinc-800 pt-12">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-semibold tracking-tight mb-8">Why Our Approach Works</h2>
@@ -219,7 +216,6 @@
     </div>
 
     <script>
-        // Mobile Menu Toggle
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
