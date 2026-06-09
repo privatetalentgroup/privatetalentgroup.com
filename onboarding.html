@@ -18,16 +18,14 @@
         .logo-svg {
             height: 38px;
             width: auto;
-            transition: transform 0.2s ease;
         }
-        .logo-svg:hover { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Updated Navbar -->
+    <!-- Mobile Responsive Navbar -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Logo -->
@@ -44,7 +42,7 @@
                     </svg>
                 </a>
 
-                <!-- Updated Navigation -->
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="how-we-work.html" class="nav-link">How We Work</a>
@@ -55,8 +53,34 @@
                     <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
-                <button onclick="showBookModal()"
-                        class="hidden md:block px-7 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                <!-- Desktop Book a Call -->
+                <div class="hidden md:block">
+                    <button onclick="showBookModal()"
+                            class="px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                        Book a Call
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-zinc-300 hover:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0a0a0a]">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
+                <a href="index.html" class="nav-link py-1">Home</a>
+                <a href="how-we-work.html" class="nav-link py-1">How We Work</a>
+                <a href="portfolio.html" class="nav-link py-1">Portfolio</a>
+                <a href="growth-strategy.html" class="nav-link py-1">Growth Strategy</a>
+                <a href="video-showcase.html" class="nav-link py-1">Video Showcase</a>
+                <a href="onboarding.html" class="nav-link py-1">Onboarding</a>
+                <a href="apply.html" class="nav-link py-1">Apply</a>
+                
+                <button onclick="showBookModal(); document.getElementById('mobile-menu').classList.add('hidden')"
+                        class="mt-4 w-full py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full text-sm tracking-wider transition-all">
                     Book a Call
                 </button>
             </div>
@@ -64,7 +88,7 @@
     </nav>
 
     <!-- Page Header -->
-    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-12">
+    <div class="max-w-screen-2xl mx-auto px-6 pt-16 pb-12">
         <div class="max-w-4xl mx-auto">
             <div class="text-xs tracking-[3px] text-[#d4af37] mb-3">OPERATIONS</div>
             <h1 class="text-5xl font-bold tracking-[-1.5px] heading-serif">7-Day Onboarding Roadmap</h1>
@@ -75,7 +99,7 @@
     </div>
 
     <!-- Introduction -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-12">
+    <div class="max-w-screen-2xl mx-auto px-6 pb-12">
         <div class="max-w-4xl mx-auto bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
             <p class="text-lg text-zinc-300">
                 Our onboarding is intentionally detailed. We believe that strong foundations lead to long-term success and safety. 
@@ -85,7 +109,7 @@
     </div>
 
     <!-- Legal Documents Section -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-16">
+    <div class="max-w-screen-2xl mx-auto px-6 pb-16">
         <div class="max-w-4xl mx-auto">
             <div class="mb-8">
                 <div class="text-xs tracking-[3px] text-[#d4af37] mb-2">LEGAL &amp; COMPLIANCE</div>
@@ -95,7 +119,7 @@
 
             <div class="space-y-4">
                 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Talent Management Agreement</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -105,7 +129,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Non-Disclosure Agreement (NDA)</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -115,7 +139,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-[#d4af37]/30 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-[#d4af37]/30 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Content License &amp; Ownership Agreement</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -125,7 +149,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>2257 Compliance Agreement</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -135,7 +159,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Privacy &amp; Data Protection Agreement</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -145,7 +169,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Commission &amp; Payment Agreement</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -155,7 +179,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>W-9 Tax Form &amp; Banking Authorization</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -170,7 +194,7 @@
     </div>
 
     <!-- 7-Day Roadmap -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
+    <div class="max-w-screen-2xl mx-auto px-6 pb-20">
         <div class="max-w-4xl mx-auto">
             <div class="mb-8">
                 <div class="text-xs tracking-[3px] text-[#d4af37] mb-2">YOUR JOURNEY</div>
@@ -179,7 +203,7 @@
 
             <div class="space-y-4">
                 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6" open>
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6" open>
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 1 — Welcome, Legal &amp; Foundations</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -191,7 +215,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 2 — Content Library Audit &amp; Organization</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -203,7 +227,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 3 — Security &amp; Digital Protection</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -215,7 +239,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 4 — Content Strategy &amp; Calendar</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -227,7 +251,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 5 — Messaging Systems Activation</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -239,7 +263,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 6 — Analytics &amp; Tracking</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -250,7 +274,7 @@
                     </div>
                 </details>
 
-                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-6">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
                         <span>Day 7 — Soft Launch &amp; Handoff</span>
                         <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
@@ -268,7 +292,7 @@
 
     <!-- CTA -->
     <div class="border-t border-zinc-800 py-12">
-        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
             <h3 class="text-2xl font-semibold mb-4">Ready to begin your onboarding?</h3>
             <button onclick="showBookModal()" 
                     class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
@@ -279,7 +303,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-zinc-800 py-8">
-        <div class="max-w-screen-2xl mx-auto px-8 text-sm text-zinc-400 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
+        <div class="max-w-screen-2xl mx-auto px-6 text-sm text-zinc-400 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
             <div>© 2026 Private Talent Group. All rights reserved.</div>
             <div class="flex items-center gap-x-6 text-xs tracking-wider">
                 <a href="index.html" class="hover:text-white transition-colors">Back to Homepage</a>
@@ -306,15 +330,28 @@
     </div>
 
     <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
         function showBookModal() {
             document.getElementById('bookModal').classList.remove('hidden');
             document.getElementById('bookModal').classList.add('flex');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
         }
+
         function hideBookModal() {
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
         }
+
         function submitForm(btn) {
             const original = btn.innerHTML;
             btn.innerHTML = 'REQUEST RECEIVED';
