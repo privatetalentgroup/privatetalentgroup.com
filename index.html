@@ -12,20 +12,15 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', system_ui, sans-serif; background-color: #0a0a0a; }
         .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
-        .section-card { transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); border: 1px solid #27272a; }
-        .section-card:hover { border-color: #3f3f46; transform: translateY(-2px); }
         .nav-link { transition: color 0.2s ease; }
         .nav-link:hover { color: #d4af37; }
-        .minimal-card { background-color: #111111; }
         
         .logo-svg {
-            height: 42px;
+            height: 38px;
             width: auto;
             transition: transform 0.2s ease;
         }
-        .logo-svg:hover {
-            transform: scale(1.05);
-        }
+        .logo-svg:hover { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
@@ -35,21 +30,14 @@
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- NEW LOGO (Key Symbol) -->
-                <a href="#hero" class="flex items-center">
-                    <svg width="42" height="58" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-                        <!-- Key Head -->
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <svg width="38" height="52" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
                         <circle cx="100" cy="80" r="55" fill="#d4af37"/>
                         <circle cx="100" cy="80" r="42" fill="#0a0a0a"/>
-                        
-                        <!-- Skyline -->
                         <path d="M65 95 L72 75 L80 90 L87 68 L95 88 L102 72 L110 92 L117 78 L125 95" 
                               stroke="#d4af37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        
-                        <!-- Key Shaft -->
                         <rect x="92" y="130" width="16" height="110" rx="2" fill="#d4af37"/>
-                        
-                        <!-- Key Teeth -->
                         <path d="M92 200 L108 200 L108 220 L92 220 Z" fill="#d4af37"/>
                         <path d="M92 230 L108 230 L108 250 L92 250 Z" fill="#d4af37"/>
                         <path d="M92 260 L100 260 L100 275 L92 275 Z" fill="#d4af37"/>
@@ -57,13 +45,14 @@
                 </a>
 
                 <!-- Navigation -->
-                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
-                    <a href="#hero" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#talent" class="nav-link">Talent</a>
-                    <a href="#" onclick="showApplyModal(); return false;" class="nav-link">Apply</a>
-                    <a href="#contact" class="nav-link">Contact</a>
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-we-work.html" class="nav-link">How We Work</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="growth-strategy.html" class="nav-link">Growth Strategy</a>
+                    <a href="video-showcase.html" class="nav-link">Video Showcase</a>
+                    <a href="onboarding.html" class="nav-link">Onboarding</a>
+                    <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
                 <button onclick="showBookModal()"
@@ -126,22 +115,7 @@
         </div>
     </div>
 
-    <!-- About -->
-    <div id="about" class="max-w-screen-2xl mx-auto px-8 pb-16 scroll-mt-20">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 items-center">
-                <div>
-                    <div class="text-xs tracking-[3px] text-[#d4af37] mb-3">OUR PHILOSOPHY</div>
-                    <h2 class="text-4xl font-semibold tracking-tight">We believe the most powerful representation happens quietly.</h2>
-                </div>
-                <div class="text-lg text-zinc-400">
-                    Private Talent Group was founded on a simple principle: exceptional creators deserve exceptional, discreet partnership. We do not chase volume. We protect privacy, craft strategy, and build lasting value for a carefully selected few.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Services -->
+    <!-- Services Overview -->
     <div id="services" class="max-w-screen-2xl mx-auto px-8 pb-20 scroll-mt-20">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
@@ -155,7 +129,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Cards remain the same -->
+                <!-- Cards -->
                 <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
                     <div class="flex items-center gap-x-3 mb-6">
                         <div class="w-6 h-px bg-[#d4af37]"></div>
@@ -197,7 +171,7 @@
                             <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-[#d4af37]"></i> Limited annual intake</li>
                             <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-[#d4af37]"></i> Aligned values &amp; vision required</li>
                         </ul>
-                        <button onclick="showApplyModal()" class="w-full py-4 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black font-medium rounded-2xl text-sm tracking-wider transition-all">
+                        <button onclick="window.location.href='apply.html'" class="w-full py-4 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black font-medium rounded-2xl text-sm tracking-wider transition-all">
                             APPLY FOR CONSIDERATION
                         </button>
                     </div>
@@ -206,34 +180,30 @@
         </div>
     </div>
 
-    <!-- Talent -->
-    <div id="talent" class="max-w-screen-2xl mx-auto px-8 pb-20 scroll-mt-20 border-t border-zinc-800 pt-16">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="text-xs tracking-[3px] text-[#d4af37] mb-3">OUR ROSTER</div>
-            <h2 class="text-4xl font-semibold tracking-tight mb-6">Our talent is intentionally private.</h2>
-            <p class="max-w-lg mx-auto text-lg text-zinc-400">We do not publish names or showcase creators publicly. Our clients value privacy above visibility.</p>
-            <button onclick="showBookModal()" class="mt-8 px-8 py-3 border border-zinc-700 hover:bg-zinc-900 rounded-full text-sm tracking-wider transition-all">
-                REQUEST A PRIVATE INTRODUCTION
-            </button>
-        </div>
-    </div>
-
-    <!-- Contact -->
-    <div id="contact" class="border-t border-zinc-800 py-12 scroll-mt-20">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <div class="text-xs tracking-[3px] text-zinc-400 mb-3">NEXT STEP</div>
-                <h3 class="text-3xl font-semibold tracking-tight mb-4">Ready to begin a confidential conversation?</h3>
-                <p class="text-zinc-400 mb-8">We respond only to serious inquiries from aligned creators.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="showBookModal()" class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
-                        BOOK A PRIVATE CALL
-                    </button>
-                    <button onclick="showApplyModal()" class="px-10 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-full text-sm tracking-wider transition-all">
-                        APPLY FOR REPRESENTATION
-                    </button>
-                </div>
+    <!-- Quick Links to Other Pages -->
+    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-semibold tracking-tight">Explore Our Resources</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="how-we-work.html" class="block p-6 bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-[#d4af37] transition-all">
+                    <div class="font-semibold mb-1">How We Work</div>
+                    <div class="text-sm text-zinc-400">Our philosophy and approach</div>
+                </a>
+                <a href="portfolio.html" class="block p-6 bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-[#d4af37] transition-all">
+                    <div class="font-semibold mb-1">Portfolio</div>
+                    <div class="text-sm text-zinc-400">What we deliver to creators</div>
+                </a>
+                <a href="growth-strategy.html" class="block p-6 bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-[#d4af37] transition-all">
+                    <div class="font-semibold mb-1">Growth Strategy</div>
+                    <div class="text-sm text-zinc-400">High-converting content hooks</div>
+                </a>
+                <a href="onboarding.html" class="block p-6 bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-[#d4af37] transition-all">
+                    <div class="font-semibold mb-1">Onboarding Roadmap</div>
+                    <div class="text-sm text-zinc-400">Your first 7 days with us</div>
+                </a>
             </div>
         </div>
     </div>
@@ -249,10 +219,10 @@
         </div>
     </footer>
 
-    <!-- Modals -->
+    <!-- Book a Call Modal -->
     <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
         <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
-            <h3 class="text-2xl font-semibold mb-2">Private Conversation</h3>
+            <h3 class="text-2xl font-semibold mb-2">Book a Private Call</h3>
             <p class="text-sm text-zinc-400 mb-6">20-minute confidential call with our principal.</p>
             <form class="space-y-5">
                 <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
@@ -275,11 +245,6 @@
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-        }
-        function showApplyModal() {
-            const modal = document.getElementById('bookModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
         }
         function submitForm(btn) {
             const original = btn.innerHTML;
