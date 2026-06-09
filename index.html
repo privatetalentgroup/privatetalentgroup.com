@@ -8,27 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Inter', system_ui, sans-serif; background-color: #0a0a0a; color: white; }
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
         .nav-link { transition: color 0.2s ease; }
         .nav-link:hover { color: #d4af37; }
     </style>
 </head>
-<body>
+<body class="bg-[#0a0a0a] text-white">
     
-    <!-- Navbar with PTG Logo -->
+    <!-- Navbar -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
-                
-                <!-- PTG SVG Logo -->
                 <a href="index.html" class="flex items-center">
-                    <svg width="220" height="55" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="15" y="65" font-family="Georgia, 'Playfair Display', serif" font-size="58" fill="#d4af37" font-weight="700">PTG</text>
-                        <line x1="15" y1="78" x2="305" y2="78" stroke="#d4af37" stroke-width="1.5"/>
-                        <text x="15" y="95" font-family="Inter, system-ui, Arial, sans-serif" font-size="11" fill="#d4af37" letter-spacing="4">PRIVATE TALENT GROUP</text>
+                    <svg width="95" height="55" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 90 Q60 30 100 55 Q140 30 180 90" stroke="#d4af37" stroke-width="11" stroke-linecap="round"/>
+                        <path d="M35 82 Q65 45 100 60 Q135 45 165 82" stroke="#d4af37" stroke-width="5" stroke-opacity="0.6" stroke-linecap="round"/>
                     </svg>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="how-we-work.html" class="nav-link">How We Work</a>
@@ -39,8 +36,7 @@
                     <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
-                <button onclick="showBookModal()"
-                        class="hidden md:block px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                <button onclick="showBookModal()" class="hidden md:block px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
                     Book a Call
                 </button>
             </div>
@@ -48,24 +44,81 @@
     </nav>
 
     <!-- Hero -->
-    <div class="max-w-screen-2xl mx-auto px-6 pt-24 pb-20 text-center">
+    <div class="max-w-screen-2xl mx-auto px-6 pt-24 pb-16 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-6xl md:text-7xl font-bold tracking-[-1.5px] leading-tight">
-                Discreet LAS VEGAS local creator management<br>for those who move differently after dark.
+            <div class="inline-block px-4 py-1 mb-6 border border-zinc-800 rounded-full text-xs tracking-[3px] text-zinc-400">
+                EST. 2018 • LAS VEGAS
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold tracking-[-1.5px] leading-tight heading-serif">
+                Discreet creator management<br>for those who move differently after dark.
             </h1>
+            
             <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto">
-                Discreet management for the local creators who run LAS VEGAS nightlife.We partner exclusively with a select circle of local hospitality and nightlife professionals, transforming after-hours influence into digital empires—quietly, after dark.
+                We partner exclusively with an intimate circle of private creators who understand that true power in this city is exercised quietly, after dark.
             </p>
             
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="showBookModal()" 
-                        class="px-9 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
+                <button onclick="showBookModal()" class="px-9 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
                     BEGIN A CONVERSATION
                 </button>
-                <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" 
-                        class="px-9 py-4 border border-zinc-700 rounded-full text-sm tracking-wider hover:bg-zinc-900 transition-all">
+                <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" class="px-9 py-4 border border-zinc-700 rounded-full text-sm tracking-wider hover:bg-zinc-900 transition-all">
                     EXPLORE OUR APPROACH
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- METRICS / STATS SECTION (Restored) -->
+    <div class="max-w-screen-2xl mx-auto px-6 pb-16">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center border-y border-zinc-800 py-10">
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter">19+</div>
+                    <div class="text-sm text-zinc-400 mt-2 tracking-wider">CREATORS REPRESENTED</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter">30M+</div>
+                    <div class="text-sm text-zinc-400 mt-2 tracking-wider">TOTAL AUDIENCE REACH</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter">35+</div>
+                    <div class="text-sm text-zinc-400 mt-2 tracking-wider">COUNTRIES WORLDWIDE</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter">98%</div>
+                    <div class="text-sm text-zinc-400 mt-2 tracking-wider">CLIENT RETENTION</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="max-w-screen-2xl mx-auto px-6 pb-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10">
+                <div class="text-xs tracking-[3px] text-zinc-400 mb-2">OUR APPROACH</div>
+                <h2 class="text-4xl font-semibold tracking-tight">Thoughtful. Private.<br>Exceptional.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold tracking-tight mb-4">Discreet Representation</h3>
+                    <p class="text-sm text-zinc-400">Long-term career guidance and high-value brand opportunities with complete privacy.</p>
+                </div>
+                
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold tracking-tight mb-4">Privacy-First Operations</h3>
+                    <p class="text-sm text-zinc-400">End-to-end discreet operations, brand protection, and strategic counsel.</p>
+                </div>
+                
+                <div class="bg-zinc-900 border border-[#d4af37]/30 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold tracking-tight mb-4">Selective Intake</h3>
+                    <p class="text-sm text-zinc-400 mb-6">We only work with a small number of aligned creators each year.</p>
+                    <button onclick="window.location.href='apply.html'" class="text-sm font-medium text-[#d4af37] hover:underline">
+                        Apply for Consideration →
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -80,6 +133,23 @@
         </div>
     </footer>
 
+    <!-- Book a Call Modal -->
+    <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+        <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
+            <h3 class="text-2xl font-semibold mb-2">Book a Private Call</h3>
+            <p class="text-sm text-zinc-400 mb-6">20-minute confidential call with our principal.</p>
+            <form class="space-y-5">
+                <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="email" placeholder="Email" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
+                    <input type="tel" placeholder="Phone" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
+                </div>
+                <textarea placeholder="What brings you here?" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-3xl px-5 py-4 h-24 text-sm outline-none"></textarea>
+                <button type="button" onclick="submitForm(this)" class="w-full py-4 bg-[#d4af37] hover:bg-[#c9a05f] text-black font-medium rounded-2xl text-sm tracking-[1px] transition-all">REQUEST CONFIDENTIAL CALL</button>
+            </form>
+        </div>
+    </div>
+
     <script>
         function showBookModal() {
             document.getElementById('bookModal').classList.remove('hidden');
@@ -89,6 +159,19 @@
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
+        }
+        function submitForm(btn) {
+            const original = btn.innerHTML;
+            btn.innerHTML = 'REQUEST RECEIVED';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = 'THANK YOU. WE WILL CONTACT YOU PRIVATELY.';
+                setTimeout(() => {
+                    hideBookModal();
+                    btn.innerHTML = original;
+                    btn.disabled = false;
+                }, 2000);
+            }, 1400);
         }
     </script>
 </body>
