@@ -14,69 +14,47 @@
 </head>
 <body>
     
-  <!-- Navbar with Bigger Logo -->
-<nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-screen-2xl mx-auto px-6">
-        <div class="flex items-center justify-between h-20">
-            
-            <!-- Bigger PNG Logo -->
-            <a href="index.html" class="flex items-center">
-                <img src="discreet_logo.png" alt="Private Talent Group" class="h-35 w-auto">
-            </a>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="how-we-work.html" class="nav-link">How We Work</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="growth-strategy.html" class="nav-link">Growth Strategy</a>
-                <a href="video-showcase.html" class="nav-link">Video Showcase</a>
-                <a href="onboarding.html" class="nav-link">Onboarding</a>
-                <a href="apply.html" class="nav-link">Apply</a>
-            </div>
-
-            <button onclick="showBookModal()"
-                    class="hidden md:block px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
-                Book a Call
-            </button>
-        </div>
-    </div>
-</nav>
-
-                <!-- Mobile Hamburger Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-2xl text-zinc-300 hover:text-white">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0a0a0a]">
-            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
-                <a href="index.html" class="nav-link py-1">Home</a>
-                <a href="how-we-work.html" class="nav-link py-1">How We Work</a>
-                <a href="portfolio.html" class="nav-link py-1">Portfolio</a>
-                <a href="growth-strategy.html" class="nav-link py-1">Growth Strategy</a>
-                <a href="video-showcase.html" class="nav-link py-1">Video Showcase</a>
-                <a href="onboarding.html" class="nav-link py-1">Onboarding</a>
-                <a href="apply.html" class="nav-link py-1">Apply</a>
+    <!-- Navbar with PTG Logo -->
+    <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
                 
-                <button onclick="showBookModal(); document.getElementById('mobile-menu').classList.add('hidden')"
-                        class="mt-4 w-full py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full text-sm tracking-wider transition-all">
+                <!-- PTG SVG Logo -->
+                <a href="index.html" class="flex items-center">
+                    <svg width="220" height="55" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="15" y="65" font-family="Georgia, 'Playfair Display', serif" font-size="58" fill="#d4af37" font-weight="700">PTG</text>
+                        <line x1="15" y1="78" x2="305" y2="78" stroke="#d4af37" stroke-width="1.5"/>
+                        <text x="15" y="95" font-family="Inter, system-ui, Arial, sans-serif" font-size="11" fill="#d4af37" letter-spacing="4">PRIVATE TALENT GROUP</text>
+                    </svg>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-we-work.html" class="nav-link">How We Work</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="growth-strategy.html" class="nav-link">Growth Strategy</a>
+                    <a href="video-showcase.html" class="nav-link">Video Showcase</a>
+                    <a href="onboarding.html" class="nav-link">Onboarding</a>
+                    <a href="apply.html" class="nav-link">Apply</a>
+                </div>
+
+                <button onclick="showBookModal()"
+                        class="hidden md:block px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
                     Book a Call
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <div class="max-w-screen-2xl mx-auto px-6 pt-24 pb-20 text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-6xl md:text-7xl font-bold tracking-[-1.5px] leading-tight">
                 Discreet creator management<br>for those who move differently after dark.
             </h1>
             <p class="mt-6 text-xl text-zinc-400 max-w-2xl mx-auto">
-                Discreet management for the women who run Las Vegas nightlife.We partner exclusively with a select circle of local hospitality and nightlife professionals, transforming after-hours influence into digital empires—quietly, after dark.
+                We partner exclusively with an intimate circle of private creators who understand that true power in this city is exercised quietly, after dark.
             </p>
             
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -102,58 +80,15 @@
         </div>
     </footer>
 
-    <!-- Book a Call Modal -->
-    <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
-        <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
-            <h3 class="text-2xl font-semibold mb-2">Book a Private Call</h3>
-            <p class="text-sm text-zinc-400 mb-6">20-minute confidential call with our principal.</p>
-            <form class="space-y-5">
-                <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="email" placeholder="Email" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
-                    <input type="tel" placeholder="Phone" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
-                </div>
-                <textarea placeholder="What brings you here?" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-3xl px-5 py-4 h-24 text-sm outline-none"></textarea>
-                <button type="button" onclick="submitForm(this)" class="w-full py-4 bg-[#d4af37] hover:bg-[#c9a05f] text-black font-medium rounded-2xl text-sm tracking-[1px] transition-all">REQUEST CONFIDENTIAL CALL</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
         function showBookModal() {
             document.getElementById('bookModal').classList.remove('hidden');
             document.getElementById('bookModal').classList.add('flex');
-            if (mobileMenu) mobileMenu.classList.add('hidden');
         }
-
         function hideBookModal() {
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-        }
-
-        function submitForm(btn) {
-            const original = btn.innerHTML;
-            btn.innerHTML = 'REQUEST RECEIVED';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.innerHTML = 'THANK YOU. WE WILL CONTACT YOU PRIVATELY.';
-                setTimeout(() => {
-                    hideBookModal();
-                    btn.innerHTML = original;
-                    btn.disabled = false;
-                }, 2000);
-            }, 1400);
         }
     </script>
 </body>
