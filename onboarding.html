@@ -21,13 +21,11 @@
             transition: transform 0.2s ease;
         }
         .logo-svg:hover { transform: scale(1.05); }
-        
-        details summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Navbar -->
+    <!-- Updated Navbar -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="flex items-center justify-between h-20">
@@ -46,12 +44,15 @@
                     </svg>
                 </a>
 
-                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                <!-- Updated Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html#about" class="nav-link">About</a>
-                    <a href="index.html#services" class="nav-link">Services</a>
-                    <a href="#" class="nav-link font-semibold text-[#d4af37]">Onboarding</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="how-we-work.html" class="nav-link">How We Work</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="growth-strategy.html" class="nav-link">Growth Strategy</a>
+                    <a href="video-showcase.html" class="nav-link">Video Showcase</a>
+                    <a href="onboarding.html" class="nav-link font-semibold text-[#d4af37]">Onboarding</a>
+                    <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
                 <button onclick="showBookModal()"
@@ -83,122 +84,196 @@
         </div>
     </div>
 
-    <!-- 7-Day Roadmap -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
-        <div class="max-w-4xl mx-auto space-y-4">
-            
-            <!-- Day 1 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6" open>
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 1 — Welcome, Legal &amp; Foundations</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• 60-minute strategy call covering goals, boundaries, and brand persona</div>
-                    <div>• Signing of management agreement, NDA, and content release forms</div>
-                    <div>• Full OnlyFans profile optimization and welcome sequence setup</div>
-                    <div>• Security baseline activation (2FA, geo-blocking, password protocols)</div>
-                </div>
-            </details>
+    <!-- Legal Documents Section -->
+    <div class="max-w-screen-2xl mx-auto px-8 pb-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <div class="text-xs tracking-[3px] text-[#d4af37] mb-2">LEGAL &amp; COMPLIANCE</div>
+                <h2 class="text-3xl font-semibold tracking-tight">Legal Documents You Will Sign</h2>
+                <p class="mt-2 text-zinc-400">These agreements protect both you and Private Talent Group. We believe in full transparency.</p>
+            </div>
 
-            <!-- Day 2 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 2 — Content Library Audit &amp; Organization</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• Full audit and categorization of existing content library</div>
-                    <div>• Professional tagging system for efficient PPV and custom bundling</div>
-                    <div>• Identification of top-performing and highest-potential content</div>
-                    <div>• Content gap analysis and first filming recommendations</div>
-                </div>
-            </details>
+            <div class="space-y-4">
+                
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Talent Management Agreement</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>The main contract outlining our working relationship, services provided, commission structure, and termination terms.</p>
+                    </div>
+                </details>
 
-            <!-- Day 3 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 3 — Security &amp; Digital Protection</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• Regional geo-blocking configuration</div>
-                    <div>• Professional watermarking applied across all content</div>
-                    <div>• DMCA monitoring service activation and takedown protocol setup</div>
-                    <div>• Privacy training and doxxing response playbook delivery</div>
-                </div>
-            </details>
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Non-Disclosure Agreement (NDA)</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>Protects confidential information shared between you and the agency, including business practices and personal details.</p>
+                    </div>
+                </details>
 
-            <!-- Day 4 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 4 — Content Strategy &amp; Calendar</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• Custom 30-day content calendar aligned with proven growth hooks</div>
-                    <div>• Efficient filming batch planning for maximum output</div>
-                    <div>• Repurposing workflow for long-form to short-form content</div>
-                </div>
-            </details>
+                <details class="group bg-zinc-900 border border-[#d4af37]/30 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Content License &amp; Ownership Agreement</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p><strong>Important:</strong> You retain full ownership of all content you create. We receive a limited license to promote and monetize it on your behalf during our partnership.</p>
+                    </div>
+                </details>
 
-            <!-- Day 5 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 5 — Messaging Systems Activation</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• Customization and scheduling of high-converting PPV scripts</div>
-                    <div>• Automated welcome sequence for new subscribers</div>
-                    <div>• First mass message campaign execution</div>
-                </div>
-            </details>
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>2257 Compliance Agreement</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>Required for adult content compliance under U.S. law. Includes age verification and record-keeping acknowledgment.</p>
+                    </div>
+                </details>
 
-            <!-- Day 6 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 6 — Analytics &amp; Tracking Baseline</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• Full analytics and conversion tracking implementation</div>
-                    <div>• Custom KPI dashboard creation</div>
-                    <div>• Competitor benchmarking within the niche</div>
-                </div>
-            </details>
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Privacy &amp; Data Protection Agreement</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>Details how your personal information and content will be stored, used, and protected.</p>
+                    </div>
+                </details>
 
-            <!-- Day 7 -->
-            <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
-                <summary class="flex items-center justify-between cursor-pointer font-semibold text-xl">
-                    <span>Day 7 — Soft Launch &amp; Ongoing Support</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
-                </summary>
-                <div class="pt-6 pl-1 text-zinc-300 space-y-3">
-                    <div>• First-week performance review call</div>
-                    <div>• Access to shared operations dashboard</div>
-                    <div>• Transition into weekly strategy calls and 24/7 support channel</div>
-                </div>
-            </details>
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Commission &amp; Payment Agreement</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>Outlines revenue split, payment schedule, chargeback handling, and how net revenue is calculated.</p>
+                    </div>
+                </details>
 
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>W-9 Tax Form &amp; Banking Authorization</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <p>Required for tax purposes and to set up secure payment processing to your account.</p>
+                    </div>
+                </details>
+
+            </div>
         </div>
     </div>
 
-    <!-- CTA Section -->
+    <!-- 7-Day Roadmap -->
+    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <div class="text-xs tracking-[3px] text-[#d4af37] mb-2">YOUR JOURNEY</div>
+                <h2 class="text-3xl font-semibold tracking-tight">7-Day Onboarding Roadmap</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6" open>
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 1 — Welcome, Legal &amp; Foundations</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• 60-minute strategy call (goals, boundaries, persona)</div>
+                        <div>• Signing of management agreement, NDA, and content license forms</div>
+                        <div>• OnlyFans profile optimization and security setup</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 2 — Content Library Audit &amp; Organization</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• Full content library categorization and tagging</div>
+                        <div>• Identification of top-performing content</div>
+                        <div>• Content gap analysis and filming recommendations</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 3 — Security &amp; Digital Protection</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• Regional geo-blocking and watermarking</div>
+                        <div>• DMCA monitoring setup</div>
+                        <div>• Privacy training and protection protocols</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 4 — Content Strategy &amp; Calendar</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• Custom 30-day content calendar</div>
+                        <div>• Filming batch planning</div>
+                        <div>• Repurposing workflow setup</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 5 — Messaging Systems Activation</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• PPV script customization and scheduling</div>
+                        <div>• Welcome sequence setup</div>
+                        <div>• First mass message campaign</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 6 — Analytics &amp; Tracking</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• Analytics and conversion tracking setup</div>
+                        <div>• Custom KPI dashboard creation</div>
+                    </div>
+                </details>
+
+                <details class="group bg-zinc-900 border border-zinc-800 rounded-3xl px-8 py-6">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+                        <span>Day 7 — Soft Launch &amp; Handoff</span>
+                        <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180 text-[#d4af37]"></i>
+                    </summary>
+                    <div class="pt-5 pl-1 text-sm text-zinc-300 space-y-2">
+                        <div>• First-week performance review</div>
+                        <div>• Access to operations dashboard</div>
+                        <div>• Transition to ongoing weekly support</div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
     <div class="border-t border-zinc-800 py-12">
         <div class="max-w-screen-2xl mx-auto px-8 text-center">
             <h3 class="text-2xl font-semibold mb-4">Ready to begin your onboarding?</h3>
-            <p class="text-zinc-400 mb-8 max-w-md mx-auto">We only onboard a limited number of creators per month to ensure quality and attention.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="showBookModal()" 
-                        class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
-                    Book Your Onboarding Call
-                </button>
-                <button onclick="showApplyModal()" 
-                        class="px-10 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-full text-sm tracking-wider transition-all">
-                    Apply for Representation
-                </button>
-            </div>
+            <button onclick="showBookModal()" 
+                    class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
+                Book Your Onboarding Call
+            </button>
         </div>
     </div>
 
@@ -213,18 +288,18 @@
         </div>
     </footer>
 
-    <!-- Modals -->
+    <!-- Book a Call Modal -->
     <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
         <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
             <h3 class="text-2xl font-semibold mb-2">Book Your Onboarding Call</h3>
-            <p class="text-sm text-zinc-400 mb-6">Let’s discuss your goals and begin the process.</p>
+            <p class="text-sm text-zinc-400 mb-6">Let’s get started with your onboarding process.</p>
             <form class="space-y-5">
                 <input type="text" placeholder="Full Name" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
                 <div class="grid grid-cols-2 gap-4">
                     <input type="email" placeholder="Email" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
                     <input type="tel" placeholder="Phone" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-2xl px-5 py-3 text-sm outline-none">
                 </div>
-                <textarea placeholder="Tell us a bit about your current situation..." class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-3xl px-5 py-4 h-24 text-sm outline-none"></textarea>
+                <textarea placeholder="What are you looking for in representation?" class="w-full bg-zinc-950 border border-zinc-700 focus:border-[#d4af37] rounded-3xl px-5 py-4 h-24 text-sm outline-none"></textarea>
                 <button type="button" onclick="submitForm(this)" class="w-full py-4 bg-[#d4af37] hover:bg-[#c9a05f] text-black font-medium rounded-2xl text-sm tracking-[1px] transition-all">REQUEST CALL</button>
             </form>
         </div>
@@ -239,10 +314,6 @@
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-        }
-        function showApplyModal() {
-            alert("Thank you. Our application form will open in a new window (demo).");
-            // You can replace this with a real application modal or link later
         }
         function submitForm(btn) {
             const original = btn.innerHTML;
