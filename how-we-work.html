@@ -25,7 +25,7 @@
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Navbar -->
+    <!-- Updated Navbar -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-8">
             <div class="flex items-center justify-between h-20">
@@ -44,12 +44,15 @@
                     </svg>
                 </a>
 
-                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                <!-- Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html#about" class="nav-link">About</a>
-                    <a href="#" class="nav-link font-semibold text-[#d4af37]">How We Work</a>
+                    <a href="how-we-work.html" class="nav-link font-semibold text-[#d4af37]">How We Work</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="growth-strategy.html" class="nav-link">Growth Strategy</a>
+                    <a href="video-showcase.html" class="nav-link">Video Showcase</a>
                     <a href="onboarding.html" class="nav-link">Onboarding</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
                 <button onclick="showBookModal()"
@@ -92,7 +95,6 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Principle 1 -->
                 <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
                     <div class="text-[#d4af37] mb-4">
                         <i class="fa-solid fa-shield-halved text-3xl"></i>
@@ -101,7 +103,6 @@
                     <p class="text-zinc-400">Everything we do is built around protecting your privacy. From content strategy to communication, discretion is non-negotiable.</p>
                 </div>
 
-                <!-- Principle 2 -->
                 <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
                     <div class="text-[#d4af37] mb-4">
                         <i class="fa-solid fa-users text-3xl"></i>
@@ -110,7 +111,6 @@
                     <p class="text-zinc-400">We maintain a small roster by design. This allows us to give every creator the attention, strategy, and protection they deserve.</p>
                 </div>
 
-                <!-- Principle 3 -->
                 <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
                     <div class="text-[#d4af37] mb-4">
                         <i class="fa-solid fa-chart-line text-3xl"></i>
@@ -176,7 +176,7 @@
                         class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
                     Book a Discovery Call
                 </button>
-                <button onclick="showApplyModal()" 
+                <button onclick="window.location.href='apply.html'" 
                         class="px-10 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-full text-sm tracking-wider transition-all">
                     Apply for Representation
                 </button>
@@ -195,7 +195,7 @@
         </div>
     </footer>
 
-    <!-- Modals -->
+    <!-- Book a Call Modal -->
     <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
         <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
             <h3 class="text-2xl font-semibold mb-2">Book a Discovery Call</h3>
@@ -221,9 +221,6 @@
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
-        }
-        function showApplyModal() {
-            alert("Thank you. Our application form will open shortly.");
         }
         function submitForm(btn) {
             const original = btn.innerHTML;
