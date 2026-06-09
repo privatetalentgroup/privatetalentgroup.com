@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <title>Private Talent Group | Discreet Creator Management</title>
   <meta name="description" content="Discreet creator management for premium private creators in Las Vegas nightlife and hospitality." />
@@ -16,7 +16,6 @@
       --bg: #020303;
       --bg-soft: #050607;
       --panel: #0b0d0f;
-      --panel-soft: #111417;
       --text: #f3eee6;
       --muted: #b8b2a9;
       --muted-dark: #817a72;
@@ -24,7 +23,6 @@
       --gold-soft: #f1d391;
       --gold-dark: #8c6634;
       --border-soft: rgba(255, 255, 255, 0.08);
-      --border-gold: rgba(217, 176, 106, 0.22);
       --shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
     }
 
@@ -36,6 +34,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -47,6 +46,8 @@
       color: var(--text);
       font-family: "Inter", sans-serif;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
     }
 
     body::before {
@@ -82,23 +83,25 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(3, 4, 5, 0.86);
+      background: rgba(3, 4, 5, 0.9);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border-soft);
     }
 
     .nav {
       height: 96px;
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      justify-content: space-between;
       gap: 30px;
+      position: relative;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      min-width: max-content;
+      min-width: 0;
     }
 
     .brand-logo {
@@ -114,6 +117,7 @@
     .nav-links {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 36px;
       color: rgba(255, 255, 255, 0.82);
       font-size: 14px;
@@ -121,6 +125,9 @@
     }
 
     .nav-links a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
       transition: color 0.2s ease;
     }
 
@@ -128,7 +135,9 @@
       color: var(--gold-soft);
     }
 
-    .nav-cta {
+    .nav-cta,
+    .mobile-cta {
+      min-height: 48px;
       padding: 14px 34px;
       border: 1px solid rgba(217, 176, 106, 0.7);
       border-radius: 6px;
@@ -139,11 +148,81 @@
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
       transition: all 0.2s ease;
       white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .nav-cta:hover {
+    .nav-cta:hover,
+    .mobile-cta:hover {
       background: rgba(217, 176, 106, 0.12);
       transform: translateY(-1px);
+    }
+
+    .mobile-cta {
+      display: none;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+
+    .menu-button {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(217, 176, 106, 0.38);
+      border-radius: 8px;
+      background: rgba(217, 176, 106, 0.035);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-lines {
+      width: 22px;
+      height: 14px;
+      position: relative;
+      display: block;
+    }
+
+    .menu-lines::before,
+    .menu-lines::after,
+    .menu-lines span {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 1.5px;
+      background: var(--gold-soft);
+      border-radius: 99px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-lines::before {
+      top: 0;
+    }
+
+    .menu-lines span {
+      top: 6px;
+    }
+
+    .menu-lines::after {
+      bottom: 0;
+    }
+
+    .nav-toggle:checked + .menu-button .menu-lines::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle:checked + .menu-button .menu-lines span {
+      opacity: 0;
+    }
+
+    .nav-toggle:checked + .menu-button .menu-lines::after {
+      transform: translateY(-6px) rotate(-45deg);
     }
 
     .hero {
@@ -347,7 +426,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 54px;
+      min-height: 54px;
       width: 100%;
       border-radius: 7px;
       font-family: "Cormorant Garamond", serif;
@@ -409,7 +488,7 @@
 
     footer {
       border-top: 1px solid var(--border-soft);
-      padding: 24px 0 36px;
+      padding: 24px 0 calc(36px + env(safe-area-inset-bottom));
       color: var(--muted-dark);
       font-size: 13px;
     }
@@ -426,30 +505,22 @@
       color: var(--gold-dark);
     }
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1100px) {
       .nav {
-        height: auto;
-        padding: 22px 0;
-        flex-wrap: wrap;
+        gap: 22px;
       }
 
       .brand-logo {
-        height: 64px;
-        width: 310px;
-        max-width: 70vw;
+        width: 300px;
       }
 
       .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 22px;
-        flex-wrap: wrap;
+        gap: 24px;
       }
 
       .stats,
       .sections {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .feature-panel:last-child {
@@ -457,37 +528,135 @@
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 860px) {
       .container {
         width: min(100% - 28px, 1180px);
       }
 
+      header {
+        padding-top: env(safe-area-inset-top);
+      }
+
       .nav {
-        justify-content: center;
-        gap: 20px;
+        height: auto;
+        min-height: 78px;
+        grid-template-columns: 1fr auto;
+        gap: 14px;
       }
 
       .brand-logo {
-        height: 58px;
-        width: 290px;
-        max-width: 88vw;
+        height: 56px;
+        width: 285px;
+        max-width: 72vw;
+      }
+
+      .menu-button {
+        display: flex;
       }
 
       .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
         width: 100%;
-        text-align: center;
+        padding: 16px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 4px;
+        border: 1px solid rgba(217, 176, 106, 0.16);
+        border-radius: 14px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+          rgba(3, 4, 5, 0.98);
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.72);
+      }
+
+      .nav-links a {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 14px;
+        border-radius: 8px;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .nav-links a:hover {
+        background: rgba(217, 176, 106, 0.08);
+      }
+
+      .mobile-cta {
+        display: inline-flex;
+      }
+
+      .nav-toggle:checked ~ .nav-links {
+        display: flex;
       }
 
       .hero {
-        padding-top: 54px;
+        padding: 54px 0 28px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        line-height: 1.6;
       }
 
       h1 {
-        font-size: clamp(44px, 14vw, 66px);
+        max-width: 94%;
+        font-size: clamp(43px, 12.5vw, 64px);
+        line-height: 1;
       }
 
       .hero p {
+        max-width: 92%;
         font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .stats {
+        margin-top: 34px;
+        gap: 16px;
+      }
+
+      .stat-card {
+        min-height: 118px;
+        padding: 22px;
+      }
+
+      .sections {
+        gap: 18px;
+        padding-bottom: 56px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-logo {
+        height: 50px;
+        width: 245px;
+        max-width: 72vw;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 13vw, 54px);
+      }
+
+      .hero p {
+        font-size: 15.5px;
       }
 
       .stats,
@@ -495,8 +664,16 @@
         grid-template-columns: 1fr;
       }
 
+      .feature-panel:last-child {
+        grid-column: auto;
+      }
+
       .stat-card {
-        min-height: 112px;
+        min-height: 108px;
+      }
+
+      .stat-number {
+        font-size: 44px;
       }
 
       .feature-panel {
@@ -504,8 +681,55 @@
         padding: 24px;
       }
 
+      .feature-panel h2 {
+        font-size: 31px;
+      }
+
       .service-item {
         grid-template-columns: 58px 1fr;
+        gap: 12px;
+        padding: 13px 12px;
+      }
+
+      .service-icon {
+        width: 52px;
+        height: 52px;
+      }
+
+      .service-item h3 {
+        font-size: 21px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+
+      .footer-row {
+        gap: 10px 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand-logo {
+        width: 220px;
+        height: 46px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .stat-card {
+        align-items: flex-start;
+      }
+
+      .icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .stat-number {
+        font-size: 40px;
       }
     }
   </style>
@@ -520,6 +744,11 @@
           <img src="assets/ptg-logo.png" alt="Private Talent Group" class="brand-logo">
         </a>
 
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+        <label for="nav-toggle" class="menu-button" aria-label="Open navigation menu">
+          <span class="menu-lines"><span></span></span>
+        </label>
+
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -527,6 +756,7 @@
           <a href="#talent">Talent</a>
           <a href="#apply">Apply</a>
           <a href="#contact">Contact</a>
+          <a href="#contact" class="mobile-cta">Book a Call</a>
         </nav>
 
         <a href="#contact" class="nav-cta">Book a Call</a>
@@ -724,5 +954,16 @@
     </footer>
 
   </div>
+
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle.checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
