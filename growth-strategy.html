@@ -18,16 +18,14 @@
         .logo-svg {
             height: 38px;
             width: auto;
-            transition: transform 0.2s ease;
         }
-        .logo-svg:hover { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-white">
     
-    <!-- Navbar -->
+    <!-- Mobile Responsive Navbar -->
     <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto px-8">
+        <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Logo -->
@@ -44,16 +42,45 @@
                     </svg>
                 </a>
 
-                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium tracking-wide">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="how-we-work.html" class="nav-link">How We Work</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="growth-strategy.html" class="nav-link font-semibold text-[#d4af37]">Growth Strategy</a>
+                    <a href="video-showcase.html" class="nav-link">Video Showcase</a>
                     <a href="onboarding.html" class="nav-link">Onboarding</a>
-                    <a href="#" class="nav-link font-semibold text-[#d4af37]">Growth Strategy</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="apply.html" class="nav-link">Apply</a>
                 </div>
 
-                <button onclick="showBookModal()"
-                        class="hidden md:block px-7 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                <!-- Desktop Book a Call -->
+                <div class="hidden md:block">
+                    <button onclick="showBookModal()"
+                            class="px-6 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                        Book a Call
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-zinc-300 hover:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-[#0a0a0a]">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
+                <a href="index.html" class="nav-link py-1">Home</a>
+                <a href="how-we-work.html" class="nav-link py-1">How We Work</a>
+                <a href="portfolio.html" class="nav-link py-1">Portfolio</a>
+                <a href="growth-strategy.html" class="nav-link py-1">Growth Strategy</a>
+                <a href="video-showcase.html" class="nav-link py-1">Video Showcase</a>
+                <a href="onboarding.html" class="nav-link py-1">Onboarding</a>
+                <a href="apply.html" class="nav-link py-1">Apply</a>
+                
+                <button onclick="showBookModal(); document.getElementById('mobile-menu').classList.add('hidden')"
+                        class="mt-4 w-full py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full text-sm tracking-wider transition-all">
                     Book a Call
                 </button>
             </div>
@@ -61,7 +88,7 @@
     </nav>
 
     <!-- Page Header -->
-    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-10">
+    <div class="max-w-screen-2xl mx-auto px-6 pt-16 pb-12">
         <div class="max-w-4xl mx-auto">
             <div class="text-xs tracking-[3px] text-[#d4af37] mb-3">CONTENT &amp; TRAFFIC</div>
             <h1 class="text-5xl font-bold tracking-[-1.5px] heading-serif">Growth Strategy</h1>
@@ -72,7 +99,7 @@
     </div>
 
     <!-- Introduction -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-12">
+    <div class="max-w-screen-2xl mx-auto px-6 pb-12">
         <div class="max-w-4xl mx-auto">
             <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                 <p class="text-lg text-zinc-300">
@@ -84,12 +111,12 @@
     </div>
 
     <!-- The 3 Strategy Hooks -->
-    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
+    <div class="max-w-screen-2xl mx-auto px-6 pb-20">
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- Hook 1 -->
-                <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <div class="w-7 h-px bg-[#d4af37]"></div>
                         <span class="text-xs tracking-[2px] text-[#d4af37] font-medium">HOOK 01</span>
@@ -113,7 +140,7 @@
                 </div>
 
                 <!-- Hook 2 -->
-                <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <div class="w-7 h-px bg-[#d4af37]"></div>
                         <span class="text-xs tracking-[2px] text-[#d4af37] font-medium">HOOK 02</span>
@@ -137,7 +164,7 @@
                 </div>
 
                 <!-- Hook 3 -->
-                <div class="section-card minimal-card rounded-3xl p-8 border border-zinc-800">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
                     <div class="flex items-center gap-x-3 mb-5">
                         <div class="w-7 h-px bg-[#d4af37]"></div>
                         <span class="text-xs tracking-[2px] text-[#d4af37] font-medium">HOOK 03</span>
@@ -164,18 +191,18 @@
         </div>
     </div>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <div class="border-t border-zinc-800 py-12">
-        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
             <h3 class="text-2xl font-semibold mb-3">Want this strategy working for you?</h3>
-            <p class="text-zinc-400 mb-8 max-w-md mx-auto">We implement and manage this entire growth system for every creator we represent.</p>
+            <p class="text-zinc-400 mb-8">We implement and manage this entire growth system for every creator we represent.</p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="showBookModal()" 
                         class="px-10 py-4 bg-white text-black font-medium rounded-full text-sm tracking-wider hover:bg-zinc-200 transition-all">
                     Book a Strategy Call
                 </button>
-                <button onclick="showApplyModal()" 
+                <button onclick="window.location.href='apply.html'" 
                         class="px-10 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-full text-sm tracking-wider transition-all">
                     Apply for Representation
                 </button>
@@ -185,7 +212,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-zinc-800 py-8">
-        <div class="max-w-screen-2xl mx-auto px-8 text-sm text-zinc-400 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
+        <div class="max-w-screen-2xl mx-auto px-6 text-sm text-zinc-400 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
             <div>© 2026 Private Talent Group. All rights reserved.</div>
             <div class="flex items-center gap-x-6 text-xs tracking-wider">
                 <a href="index.html" class="hover:text-white transition-colors">Back to Homepage</a>
@@ -194,7 +221,7 @@
         </div>
     </footer>
 
-    <!-- Modals -->
+    <!-- Book a Call Modal -->
     <div id="bookModal" onclick="hideBookModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
         <div onclick="event.stopImmediatePropagation()" class="bg-[#111111] border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9">
             <h3 class="text-2xl font-semibold mb-2">Book a Strategy Call</h3>
@@ -212,18 +239,28 @@
     </div>
 
     <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
         function showBookModal() {
             document.getElementById('bookModal').classList.remove('hidden');
             document.getElementById('bookModal').classList.add('flex');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
         }
+
         function hideBookModal() {
             const modal = document.getElementById('bookModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
         }
-        function showApplyModal() {
-            alert("Thank you. Our application will open shortly (demo).");
-        }
+
         function submitForm(btn) {
             const original = btn.innerHTML;
             btn.innerHTML = 'REQUEST RECEIVED';
