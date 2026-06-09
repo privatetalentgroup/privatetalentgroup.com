@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Representation • Private Talent Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system_ui, sans-serif; background-color: #0a0a0a; }
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; }
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #d4af37; }
+        
+        .logo-svg {
+            height: 38px;
+            width: auto;
+            transition: transform 0.2s ease;
+        }
+        .logo-svg:hover { transform: scale(1.05); }
+        
+        .form-input {
+            background-color: #111111;
+            border: 1px solid #27272a;
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            border-color: #d4af37;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+    
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-800 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <svg width="38" height="52" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <circle cx="100" cy="80" r="55" fill="#d4af37"/>
+                        <circle cx="100" cy="80" r="42" fill="#0a0a0a"/>
+                        <path d="M65 95 L72 75 L80 90 L87 68 L95 88 L102 72 L110 92 L117 78 L125 95" 
+                              stroke="#d4af37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="92" y="130" width="16" height="110" rx="2" fill="#d4af37"/>
+                        <path d="M92 200 L108 200 L108 220 L92 220 Z" fill="#d4af37"/>
+                        <path d="M92 230 L108 230 L108 250 L92 250 Z" fill="#d4af37"/>
+                        <path d="M92 260 L100 260 L100 275 L92 275 Z" fill="#d4af37"/>
+                    </svg>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-we-work.html" class="nav-link">How We Work</a>
+                    <a href="onboarding.html" class="nav-link">Onboarding</a>
+                    <a href="#" class="nav-link font-semibold text-[#d4af37]">Apply</a>
+                </div>
+
+                <button onclick="showBookModal()"
+                        class="hidden md:block px-7 py-2.5 text-sm font-medium border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black rounded-full transition-all tracking-wider">
+                    Book a Call
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-xs tracking-[3px] text-[#d4af37] mb-3">SELECTIVE INTAKE</div>
+            <h1 class="text-5xl font-bold tracking-[-1.5px] heading-serif">Apply for Representation</h1>
+            <p class="mt-4 text-xl text-zinc-400">
+                We maintain a small, high-caliber roster. Every application is reviewed personally.
+            </p>
+        </div>
+    </div>
+
+    <!-- Application Form -->
+    <div class="max-w-screen-2xl mx-auto px-8 pb-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-9">
+                
+                <form id="applicationForm" class="space-y-6">
+                    
+                    <!-- Basic Information -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-[#d4af37]">Basic Information</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <!-- Full Name -->
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Full Name *</label>
+                                <input type="text" name="full_name" required 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                            
+                            <!-- Age -->
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Age *</label>
+                                <input type="number" name="age" min="18" max="65" required 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+                            <!-- Gender -->
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Gender *</label>
+                                <select name="gender" required class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                                    <option value="">Select Gender</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Non-binary">Non-binary</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Location -->
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Current Location</label>
+                                <input type="text" name="location" placeholder="Las Vegas, NV" 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-[#d4af37]">Contact Information</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Email Address *</label>
+                                <input type="email" name="email" required 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Phone Number</label>
+                                <input type="tel" name="phone" 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media & Presence -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-[#d4af37]">Social Media &amp; Online Presence</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Instagram Handle</label>
+                                <input type="text" name="instagram" placeholder="@username" 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">OnlyFans / Fanvue</label>
+                                <input type="text" name="onlyfans" placeholder="onlyfans.com/username" 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">TikTok Handle</label>
+                                <input type="text" name="tiktok" placeholder="@username" 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-zinc-400 mb-2">Other Platforms</label>
+                                <input type="text" name="other_platforms" placeholder="Twitter, Fansly, etc." 
+                                       class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <label class="block text-sm text-zinc-400 mb-2">Approximate Total Following / Reach</label>
+                            <input type="text" name="follower_count" placeholder="e.g. 85K across platforms" 
+                                   class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                        </div>
+                    </div>
+
+                    <!-- About You -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-[#d4af37]">About You</h3>
+                        
+                        <div class="mb-5">
+                            <label class="block text-sm text-zinc-400 mb-2">Briefly describe your content and niche *</label>
+                            <textarea name="content_description" rows="4" required 
+                                      class="form-input w-full rounded-3xl px-5 py-4 text-white resize-y"
+                                      placeholder="Example: I create luxury lifestyle and sensual content focused on the older woman / younger man dynamic in Las Vegas..."></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm text-zinc-400 mb-2">Why do you want to work with Private Talent Group? *</label>
+                            <textarea name="why_us" rows="4" required 
+                                      class="form-input w-full rounded-3xl px-5 py-4 text-white resize-y"
+                                      placeholder="What are you looking for in representation?"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Availability -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-[#d4af37]">Availability</h3>
+                        <div>
+                            <label class="block text-sm text-zinc-400 mb-2">Are you available for a discovery call in the next 7 days? *</label>
+                            <select name="call_availability" required class="form-input w-full rounded-2xl px-5 py-3 text-white">
+                                <option value="">Select an option</option>
+                                <option value="Yes">Yes, I'm available</option>
+                                <option value="Within 2 weeks">Within the next 2 weeks</option>
+                                <option value="Later">Not right now, but interested</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button type="submit" 
+                                class="w-full py-4 bg-[#d4af37] hover:bg-[#c9a05f] text-black font-semibold rounded-2xl text-sm tracking-wider transition-all">
+                            SUBMIT APPLICATION
+                        </button>
+                        <p class="text-center text-xs text-zinc-500 mt-4">
+                            All applications are reviewed personally. We respond within 5–7 business days.
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 py-8">
+        <div class="max-w-screen-2xl mx-auto px-8 text-sm text-zinc-400 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
+            <div>© 2026 Private Talent Group. All rights reserved.</div>
+            <div class="flex items-center gap-x-6 text-xs tracking-wider">
+                <a href="index.html" class="hover:text-white transition-colors">Back to Homepage</a>
+                <span>CONFIDENTIAL APPLICATION</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" onclick="hideSuccessModal()" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+        <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 rounded-3xl max-w-md w-full mx-4 p-9 text-center">
+            <div class="mx-auto w-16 h-16 bg-emerald-900 rounded-full flex items-center justify-center mb-6">
+                <i class="fa-solid fa-check text-emerald-400 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Application Received</h3>
+            <p class="text-zinc-400">Thank you. Our team will review your application and contact you within 5–7 business days.</p>
+            <button onclick="hideSuccessModal()" 
+                    class="mt-8 px-8 py-3 border border-zinc-700 hover:bg-zinc-800 rounded-2xl text-sm tracking-wider transition-all">
+                Return to Homepage
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form processing
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = 'SUBMITTING...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                // Show success modal
+                document.getElementById('successModal').classList.remove('hidden');
+                document.getElementById('successModal').classList.add('flex');
+                
+                // Reset form
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+
+        function hideSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            window.location.href = 'index.html';
+        }
+
+        function showBookModal() {
+            alert("Thank you. A member of our team will contact you shortly to schedule a call.");
+        }
+    </script>
+</body>
+</html>
